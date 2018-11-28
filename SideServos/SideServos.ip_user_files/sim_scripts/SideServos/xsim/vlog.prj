@@ -1,0 +1,7 @@
+verilog xil_defaultlib --include "../../../../SideServos.srcs/sources_1/bd/SideServos/ipshared/ec67/hdl" --include "../../../../SideServos.srcs/sources_1/bd/SideServos/ipshared/5bb9/hdl/verilog" --include "../../../../SideServos.srcs/sources_1/bd/SideServos/ipshared/70fd/hdl" \
+"../../../../SideServos.srcs/sources_1/bd/SideServos/ip/SideServos_processing_system7_0_1/sim/SideServos_processing_system7_0_1.v" \
+"../../../../SideServos.srcs/sources_1/bd/SideServos/ip/SideServos_auto_pc_0/sim/SideServos_auto_pc_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

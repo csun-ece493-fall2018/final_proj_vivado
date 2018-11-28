@@ -1,0 +1,7 @@
+verilog xil_defaultlib --include "../../../../readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/ec67/hdl" --include "../../../../readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/5bb9/hdl/verilog" --include "../../../../readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/70fd/hdl" \
+"../../../bd/sensor_reading/ip/sensor_reading_processing_system7_0_0/sim/sensor_reading_processing_system7_0_0.v" \
+"../../../bd/sensor_reading/ip/sensor_reading_auto_pc_0/sim/sensor_reading_auto_pc_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

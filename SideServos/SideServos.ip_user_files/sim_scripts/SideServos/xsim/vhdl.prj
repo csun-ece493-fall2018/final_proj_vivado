@@ -1,0 +1,10 @@
+vhdl xil_defaultlib  \
+"../../../../SideServos.srcs/sources_1/bd/SideServos/sim/SideServos.vhd" \
+"../../../../SideServos.srcs/sources_1/bd/SideServos/ipshared/d5be/hdl/SideServos_v1_0_S00_AXI.vhd" \
+"../../../../SideServos.srcs/sources_1/bd/SideServos/ipshared/d5be/src/clkFreqDivider.vhd" \
+"../../../../SideServos.srcs/sources_1/bd/SideServos/ipshared/d5be/src/servos.vhd" \
+"../../../../SideServos.srcs/sources_1/bd/SideServos/ipshared/d5be/hdl/SideServos_v1_0.vhd" \
+"../../../../SideServos.srcs/sources_1/bd/SideServos/ip/SideServos_SideServos_0_0/sim/SideServos_SideServos_0_0.vhd" \
+"../../../../SideServos.srcs/sources_1/bd/SideServos/ip/SideServos_rst_ps7_0_100M_1/sim/SideServos_rst_ps7_0_100M_1.vhd" \
+
+nosort

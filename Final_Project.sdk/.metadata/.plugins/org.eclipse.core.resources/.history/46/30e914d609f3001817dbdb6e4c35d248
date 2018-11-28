@@ -1,0 +1,329 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xil_io.h"
+#include "xbasic_types.h"
+#include "xuartps_hw.h"
+
+# define SENSOR_DISTANCE 3
+# define ARRAY_LENGTH 5
+
+typedef struct {
+    int input_1;
+    int input_2;
+    int occurrence;
+} MostOccurringPair;
+
+void init_array(MostOccurringPair *pair_array);
+void add_values(MostOccurringPair *pair_array, int input_1, int input_2);
+void check_incoming_serial_data();
+int get_middle_servo_status();
+
+//S1 and S2 regs
+Xuint32 *baseaddr_s1 = (Xuint32*)XPAR_SENSOR_READINGS_0_S00_AXI_BASEADDR;
+Xuint32 *baseaddr_s2 = (Xuint32*)XPAR_SENSOR_READINGS_0_S00_AXI_BASEADDR + 5;
+Xuint32 *baseaddr_sensor_rst = (Xuint32*)XPAR_SENSOR_READINGS_0_S00_AXI_BASEADDR + 10;
+
+//Middle Servo regs
+Xuint32 *baseaddr_middle_servo_rst = (Xuint32 *)XPAR_MIDDLESERVO_0_S00_AXI_BASEADDR; //LSB
+Xuint32 *baseaddr_middle_servo_stop = (Xuint32 *)XPAR_MIDDLESERVO_0_S00_AXI_BASEADDR + 1; //LSB
+Xuint32 *baseaddr_middle_servo_current_angle = (Xuint32 *)XPAR_MIDDLESERVO_0_S00_AXI_BASEADDR + 2;  //8 lSBs
+
+//Side Servo regs
+Xuint32 *baseaddr_side_servos_rst = (Xuint32 *)XPAR_SIDESERVOS_0_S00_AXI_BASEADDR; //LSB
+Xuint32 *baseaddr_side_servos_write_current_angle = (Xuint32 *)XPAR_SIDESERVOS_0_S00_AXI_BASEADDR + 1; //7 LSBs
+Xuint32 *baseaddr_side_servos_read_current_angle = (Xuint32 *)XPAR_SIDESERVOS_0_S00_AXI_BASEADDR + 2; //7 LSBs
+
+
+// UART base address
+
+#define UART_BASEADDR XPAR_XUARTPS_0_BASEADDR
+#define UART_CLOCK_HZ XPAR_XUARTPS_0_CLOCK_HZ
+
+//the length of the buffers to be sent
+#define TEST_BUFFER_SIZE 16
+#define CHAR_ESC '~' /* '~' character is used as terminator */
+
+int main()
+{
+    init_platform();
+    u32 CntrlRegister;
+
+    CntrlRegister = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_CR_OFFSET);
+
+    /*
+    * Enable TX and RX for the device
+    */
+    XUartPs_WriteReg(UART_BASEADDR, XUARTPS_CR_OFFSET,
+    ((CntrlRegister & ~XUARTPS_CR_EN_DIS_MASK) |
+    XUARTPS_CR_TX_EN | XUARTPS_CR_RX_EN));
+
+
+    *(baseaddr_sensor_rst) = 0x00000001;
+    *(baseaddr_middle_servo_stop) = 0x00000001;
+    *(baseaddr_side_servos_rst) = 0x00000001;
+    for(int i=0;i<300000; i++);
+    *(baseaddr_side_servos_rst) = 0x00000000;
+    Xuint32 input_1[5];
+    Xuint32 input_2[5];
+	// Create an array of 25 of type MostOccurringPair
+	MostOccurringPair pair_array[ARRAY_LENGTH * ARRAY_LENGTH];
+
+    while(1){
+    	// Initialize the array with zeros
+    	init_array(pair_array);
+    	*(baseaddr_sensor_rst) = 0x00000000;
+    	input_1[0] = *(baseaddr_s1);
+    	input_1[1] = *(baseaddr_s1+1);
+    	input_1[2] = *(baseaddr_s1+2);
+    	input_1[3] = *(baseaddr_s1+3);
+    	input_1[4] = *(baseaddr_s1+4);
+
+    	input_2[0] = *(baseaddr_s2);
+    	input_2[1] = *(baseaddr_s2+1);
+    	input_2[2] = *(baseaddr_s2+2);
+    	input_2[3] = *(baseaddr_s2+3);
+    	input_2[4] = *(baseaddr_s2+4);
+    	//xil_printf("%lu,%lu,%lu,%lu,%lu\n",input_1[0],input_1[1],input_1[2],input_1[3],input_1[4]);
+    	sleep(6/1000);
+    	*(baseaddr_sensor_rst) = 0x00000000;
+
+		// Iterate input_1 array and pair it with input_2 arrays
+		// If the values already exist increase the occurrence else add the values to the object array
+		for (int index_1 = 0; index_1 < ARRAY_LENGTH; index_1++) {
+			for (int index_2 = 0; index_2 < ARRAY_LENGTH; index_2++) {
+				add_values(pair_array, input_1[index_1], input_2[index_2]);
+			}
+		}
+
+		// Testing the output
+		for (int index = 0; index < ARRAY_LENGTH * ARRAY_LENGTH; index++) {
+			if(pair_array[index].input_1 == 0 && pair_array[index].input_2 == 0 && pair_array[index].occurrence == 0){
+				break;
+			}else {
+				//run_center_servo+","+left_distance+","+right_distance+","+(String)center_servo_current_angle+","+(String)sensor_servo_angle+"~";
+				xil_printf("%d,%d,%d,%d,%d~",
+						get_middle_servo_status(),
+						pair_array[index].input_1,
+						pair_array[index].input_2,
+						*baseaddr_middle_servo_current_angle,
+						*baseaddr_side_servos_write_current_angle);
+				for(int i=0;i<10000000; i++);
+			}
+		}
+
+		/*
+		* Check if there is incoming data
+		* The incoming data will have one of the following formats:
+		* character s (e.g s~) which means stop middle servo
+		* character r (e.g r~) which means run middle servo
+		* character a with a number (e.g a50~) which means change the angle of side servos
+		*/
+		check_incoming_serial_data();
+    	for(int i=0;i<50000000; i++);
+	} // end while
+
+cleanup_platform();
+return 0;
+}
+
+int get_middle_servo_status(){
+	if(*(baseaddr_middle_servo_stop) == 0x00000001){
+		return 0;
+	}else if(*(baseaddr_middle_servo_stop) == 0x00000000){
+		return 1;
+	}else {
+		return 0;
+	}
+}
+
+void check_incoming_serial_data(){
+    u8 RecvChar;
+	if(XUartPs_IsReceiveData(UART_BASEADDR)){
+		RecvChar = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
+
+		if (RecvChar == 'r'){
+			*(baseaddr_middle_servo_stop) = 0x00000000;
+		}else if (RecvChar == 's'){
+			*(baseaddr_middle_servo_stop) = 0x00000001;
+		}else if(RecvChar == 'a'){
+			char angle_str[3] = "000";
+			xil_printf("new angle is %d~",atoi(angle_str));
+			int counter = 0;
+			while(RecvChar != CHAR_ESC && counter < 3){
+				RecvChar = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
+				xil_printf("%c, new angle is %d~",RecvChar, atoi(angle_str));
+				if (RecvChar == CHAR_ESC){
+					break;
+				}
+				angle_str[counter] = RecvChar;
+				counter++;
+			}
+
+			if(strcmp(angle_str, "000") == 0){
+				*(baseaddr_side_servos_write_current_angle) = atoi(angle_str);
+				xil_printf("new angle is %d~",atoi(angle_str));
+			}
+		}
+	}
+
+}
+
+void init_array(MostOccurringPair *pair_array) {
+    for (int index = 0; index < ARRAY_LENGTH * ARRAY_LENGTH; index++) {
+        pair_array[index].input_1 = 0;
+        pair_array[index].input_2 = 0;
+        pair_array[index].occurrence = 0;
+    }
+}
+
+void add_values(MostOccurringPair *pair_array, int input_1, int input_2) {
+    for (int index = 0; index < ARRAY_LENGTH * ARRAY_LENGTH; index++) {
+        if (pair_array[index].input_1 == input_1 && pair_array[index].input_2 == input_2) {
+            pair_array[index].occurrence++;
+            return;
+        } else {
+            if (SENSOR_DISTANCE <= (input_1 + input_2) &&
+                (pair_array[index].input_1 == 0 && pair_array[index].input_2 == 0)) {
+                pair_array[index].input_1 = input_1;
+                pair_array[index].input_2 = input_2;
+                pair_array[index].occurrence++;
+                return;
+            }
+
+        }
+    }
+}
+
+
+//#include <stdio.h>
+//#include "platform.h"
+//#include "xil_printf.h"
+//#include "xparameters.h"
+//#include "xil_io.h"
+//#include "xbasic_types.h"
+//
+//Xuint32 *baseaddr_s1 = (Xuint32*)XPAR_SENSOR_READINGS_0_S00_AXI_BASEADDR;
+//Xuint32 *baseaddr_s2 = (Xuint32*)XPAR_SENSOR_READINGS_0_S00_AXI_BASEADDR + 5;
+//Xuint32 *baseaddr_sensor_rst = (Xuint32*)XPAR_SENSOR_READINGS_0_S00_AXI_BASEADDR + 10;
+//
+////Middle Servo regs
+//Xuint32 *baseaddr_middle_servo_rst = (Xuint32 *)XPAR_MIDDLESERVO_0_S00_AXI_BASEADDR; //LSB
+//Xuint32 *baseaddr_middle_servo_stop = (Xuint32 *)XPAR_MIDDLESERVO_0_S00_AXI_BASEADDR + 1; //LSB
+//Xuint32 *baseaddr_middle_servo_current_angle = (Xuint32 *)XPAR_MIDDLESERVO_0_S00_AXI_BASEADDR + 2;  //8 lSBs
+//
+////Side Servo regs
+//Xuint32 *baseaddr_side_servos_rst = (Xuint32 *)XPAR_SIDESERVOS_0_S00_AXI_BASEADDR; //LSB
+//Xuint32 *baseaddr_side_servos_write_current_angle = (Xuint32 *)XPAR_SIDESERVOS_0_S00_AXI_BASEADDR + 1; //7 LSBs
+//Xuint32 *baseaddr_side_servos_read_current_angle = (Xuint32 *)XPAR_SIDESERVOS_0_S00_AXI_BASEADDR + 2; //7 LSBs
+//
+//int main()
+//{
+//    init_platform();
+//
+//    print("Hello World\n\r");
+//
+//    *(baseaddr_sensor_rst) = 0x00000000;
+//
+//    //Sensor Readings Test
+//    int i = 0;
+//    int j = 0;
+//    for (i = 0; i<20; i++){
+//    	printf("Sensor 1 Readings \n");
+//    	printf("Register 0 : %lu \n", *(baseaddr_s1));
+//    	printf("Register 1 : %lu \n", *(baseaddr_s1+1));
+//    	printf("Register 2 : %lu \n", *(baseaddr_s1+2));
+//    	printf("Register 3 : %lu \n", *(baseaddr_s1+3));
+//    	printf("Register 4 : %lu \n", *(baseaddr_s1+4));
+//
+//    	printf("Sensor 2 Readings \n");
+//    	printf("Register 5 : %lu \n", *(baseaddr_s2));
+//    	printf("Register 6 : %lu \n", *(baseaddr_s2+1));
+//    	printf("Register 7 : %lu \n", *(baseaddr_s2+2));
+//    	printf("Register 8 : %lu \n", *(baseaddr_s2+3));
+//    	printf("Register 9 : %lu \n", *(baseaddr_s2+4));
+//    	sleep(1);
+//
+//
+//    	if(i == 5)*(baseaddr_sensor_rst) = 0x00000001;
+//    	else *(baseaddr_sensor_rst) = 0x00000000;
+//    }
+//
+//    //Middle Servos Test
+//    for(i=0;i<300000; i++);
+//    *(baseaddr_middle_servo_rst) = 0x00000001;
+//    for(i=0;i<300000; i++);
+//    *(baseaddr_middle_servo_rst) = 0x00000000;
+//    for(i=0;i<300000; i++);
+//    *(baseaddr_middle_servo_stop) = 0x00000000;
+//    for(i=0;i<300000000; i++);
+//    *(baseaddr_middle_servo_stop) = 0x00000001;
+//    for(i=0;i<3000000; i++);
+//    *(baseaddr_middle_servo_stop) = 0x00000000;
+//    for(i=0;i<300000; i++);
+//    *(baseaddr_middle_servo_stop) = 0x00000001;
+//    for(i=0;i<300000; i++);
+//    *(baseaddr_middle_servo_rst) = 0x00000001;
+//    for(i=0;i<300000; i++);
+//    *(baseaddr_middle_servo_rst) = 0x00000000;
+//
+//
+//	//Side Servos Test
+//	for(i=0;i<3000000; i++);
+//    *(baseaddr_side_servos_rst) = 0x00000001;
+//    xil_printf("Reset =  %d \n\r", *(baseaddr_side_servos_rst));
+//    for(i=0;i<300000; i++);
+//    *(baseaddr_side_servos_rst) = 0x00000000;
+//    xil_printf("Reset =  %d \n\r", *(baseaddr_side_servos_rst));
+//    while(j != 4)
+//    {
+//    for(i=0;i<300000000; i++);
+//    xil_printf("left servo angel: %d \n\r", *(baseaddr_side_servos_read_current_angle));
+//    xil_printf("right servo angel: %d \n\r", *(baseaddr_side_servos_read_current_angle));
+//    *(baseaddr_side_servos_write_current_angle) = 0x00000000;
+//    xil_printf("input angel: %d \n\r", *(baseaddr_side_servos_write_current_angle));
+//    for(i=0;i<300000000; i++);
+//    xil_printf("left servo angel: %d \n\r", *(baseaddr_side_servos_read_current_angle));
+//    xil_printf("right servo angel: %d \n\r", *(baseaddr_side_servos_read_current_angle));
+//    *(baseaddr_side_servos_write_current_angle) = 0x0000001E;
+//    xil_printf("input angel: %d \n\r", *(baseaddr_side_servos_write_current_angle));
+//    for(i=0;i<300000000; i++);
+//    xil_printf("left servo angel: %d \n\r", *(baseaddr_side_servos_read_current_angle));
+//    xil_printf("right servo angel: %d \n\r", *(baseaddr_side_servos_read_current_angle));
+//    *(baseaddr_side_servos_write_current_angle) = 0x0000002D;
+//    xil_printf("input angel: %d \n\r", *(baseaddr_side_servos_write_current_angle));
+//    for(i=0;i<300000000; i++);
+//    xil_printf("left servo angel: %d \n\r", *(baseaddr_side_servos_read_current_angle));
+//    xil_printf("right servo angel: %d \n\r", *(baseaddr_side_servos_read_current_angle));
+//    *(baseaddr_side_servos_write_current_angle) = 0x0000003C;
+//    xil_printf("input angel: %d \n\r", *(baseaddr_side_servos_write_current_angle));
+//    for(i=0;i<300000000; i++);
+//    xil_printf("left servo angel: 0x%08x \n\r", *(baseaddr_side_servos_read_current_angle));
+//    xil_printf("right servo angel: %d \n\r", *(baseaddr_side_servos_read_current_angle));
+//    *(baseaddr_side_servos_write_current_angle) = 0x0000005A;
+//    xil_printf("input angel: %d \n\r", *(baseaddr_side_servos_write_current_angle));
+//    for(i=0;i<300000000; i++);
+//    xil_printf("left servo angel: %d \n\r", *(baseaddr_side_servos_read_current_angle));
+//    xil_printf("right servo angel: %d \n\r", *(baseaddr_side_servos_read_current_angle));
+//    *(baseaddr_side_servos_write_current_angle) = 0x0000002D;
+//    xil_printf("input angel: %d \n\r", *(baseaddr_side_servos_write_current_angle));
+//    j++;
+//    xil_printf("j =: %d \n\r", j);
+//    }
+//    *(baseaddr_side_servos_rst) = 0x00000001;
+//    xil_printf("Reset =  %d \n\r", *(baseaddr_side_servos_rst));
+//    for(i=0;i<500000000; i++);
+//    *(baseaddr_side_servos_rst) = 0x00000000;
+//    xil_printf("Reset =  %d \n\r", *(baseaddr_side_servos_rst));
+//
+//
+//    cleanup_platform();
+//    return 0;
+//}
+
+
+

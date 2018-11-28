@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# 
+# Start of session at: Wed Nov 21 15:43:02 2018
+# Process ID: 27056
+# Current directory: C:/Users/Public/Vivado/MiddleServo/MiddleServo.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/Users/Public/Vivado/MiddleServo/MiddleServo.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/Public/Vivado/MiddleServo/MiddleServo.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

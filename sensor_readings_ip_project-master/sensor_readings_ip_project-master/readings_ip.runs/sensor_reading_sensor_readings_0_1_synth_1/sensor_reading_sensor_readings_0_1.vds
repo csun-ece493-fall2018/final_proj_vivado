@@ -1,0 +1,418 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Nov 23 13:37:08 2018
+# Process ID: 10732
+# Current directory: C:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.runs/sensor_reading_sensor_readings_0_1_synth_1
+# Command line: vivado.exe -log sensor_reading_sensor_readings_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sensor_reading_sensor_readings_0_1.tcl
+# Log file: C:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.runs/sensor_reading_sensor_readings_0_1_synth_1/sensor_reading_sensor_readings_0_1.vds
+# Journal file: C:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.runs/sensor_reading_sensor_readings_0_1_synth_1\vivado.jou
+#-----------------------------------------------------------
+source sensor_reading_sensor_readings_0_1.tcl -notrace
+Command: synth_design -top sensor_reading_sensor_readings_0_1 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1436 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 387.586 ; gain = 100.703
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'sensor_reading_sensor_readings_0_1' [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ip/sensor_reading_sensor_readings_0_1/synth/sensor_reading_sensor_readings_0_1.vhd:86]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'sensor_readings_v1_0' declared at 'c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0.vhd:5' bound to instance 'U0' of component 'sensor_readings_v1_0' [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ip/sensor_reading_sensor_readings_0_1/synth/sensor_reading_sensor_readings_0_1.vhd:154]
+INFO: [Synth 8-638] synthesizing module 'sensor_readings_v1_0' [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0.vhd:53]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'sensor_readings_v1_0_S00_AXI' declared at 'c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:5' bound to instance 'sensor_readings_v1_0_S00_AXI_inst' of component 'sensor_readings_v1_0_S00_AXI' [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'sensor_readings_v1_0_S00_AXI' [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:89]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-226] default block is never used [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:285]
+INFO: [Synth 8-226] default block is never used [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:523]
+WARNING: [Synth 8-614] signal 'radar1_reading_out0' is read in the process but is not in the sensitivity list [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:518]
+WARNING: [Synth 8-614] signal 'radar1_reading_out1' is read in the process but is not in the sensitivity list [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:518]
+WARNING: [Synth 8-614] signal 'radar1_reading_out2' is read in the process but is not in the sensitivity list [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:518]
+WARNING: [Synth 8-614] signal 'radar1_reading_out3' is read in the process but is not in the sensitivity list [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:518]
+WARNING: [Synth 8-614] signal 'radar1_reading_out4' is read in the process but is not in the sensitivity list [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:518]
+WARNING: [Synth 8-614] signal 'radar2_reading_out0' is read in the process but is not in the sensitivity list [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:518]
+WARNING: [Synth 8-614] signal 'radar2_reading_out1' is read in the process but is not in the sensitivity list [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:518]
+WARNING: [Synth 8-614] signal 'radar2_reading_out2' is read in the process but is not in the sensitivity list [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:518]
+WARNING: [Synth 8-614] signal 'radar2_reading_out3' is read in the process but is not in the sensitivity list [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:518]
+WARNING: [Synth 8-614] signal 'radar2_reading_out4' is read in the process but is not in the sensitivity list [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:518]
+INFO: [Synth 8-3491] module 'main_top' declared at 'c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/main_top.vhd:8' bound to instance 'uut' of component 'main_top' [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:581]
+INFO: [Synth 8-638] synthesizing module 'main_top' [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/main_top.vhd:28]
+	Parameter originalFreq_Hz bound to: 100000000 - type: integer 
+	Parameter desiredFreq_Hz bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'clkFreqDivider' declared at 'c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/clkFreqDivider.vhd:13' bound to instance 'uut' of component 'clkFreqDivider' [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/main_top.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'clkFreqDivider' [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/clkFreqDivider.vhd:21]
+	Parameter originalFreq_Hz bound to: 100000000 - type: integer 
+	Parameter desiredFreq_Hz bound to: 100 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clkFreqDivider' (1#1) [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/clkFreqDivider.vhd:21]
+INFO: [Synth 8-3491] module 'ultrasonic_reading' declared at 'c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/ultrasonic_reading.vhd:12' bound to instance 'radar1' of component 'ultrasonic_reading' [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/main_top.vhd:77]
+INFO: [Synth 8-638] synthesizing module 'ultrasonic_reading' [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/ultrasonic_reading.vhd:19]
+INFO: [Synth 8-3491] module 'edge_detection' declared at 'c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/edge_detection.vhd:12' bound to instance 'PWM_pos' of component 'edge_detection' [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/ultrasonic_reading.vhd:39]
+INFO: [Synth 8-638] synthesizing module 'edge_detection' [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/edge_detection.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'edge_detection' (2#1) [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/edge_detection.vhd:19]
+INFO: [Synth 8-3491] module 'edge_detection' declared at 'c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/edge_detection.vhd:12' bound to instance 'PWM_neg' of component 'edge_detection' [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/ultrasonic_reading.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'ultrasonic_reading' (3#1) [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/ultrasonic_reading.vhd:19]
+INFO: [Synth 8-3491] module 'ultrasonic_reading' declared at 'c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/ultrasonic_reading.vhd:12' bound to instance 'radar2' of component 'ultrasonic_reading' [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/main_top.vhd:78]
+WARNING: [Synth 8-3848] Net radar1_rx in module/entity main_top does not have driver. [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/main_top.vhd:12]
+WARNING: [Synth 8-3848] Net radar2_rx in module/entity main_top does not have driver. [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/main_top.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'main_top' (4#1) [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/main_top.vhd:28]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg0_reg was removed.  [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:266]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg1_reg was removed.  [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:267]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg2_reg was removed.  [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:268]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg3_reg was removed.  [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:269]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg4_reg was removed.  [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:270]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg5_reg was removed.  [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:271]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg6_reg was removed.  [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:272]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg7_reg was removed.  [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:273]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg8_reg was removed.  [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:274]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg9_reg was removed.  [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:275]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:283]
+INFO: [Synth 8-256] done synthesizing module 'sensor_readings_v1_0_S00_AXI' (5#1) [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd:89]
+INFO: [Synth 8-256] done synthesizing module 'sensor_readings_v1_0' (6#1) [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'sensor_reading_sensor_readings_0_1' (7#1) [c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ip/sensor_reading_sensor_readings_0_1/synth/sensor_reading_sensor_readings_0_1.vhd:86]
+WARNING: [Synth 8-3331] design main_top has unconnected port radar1_rx
+WARNING: [Synth 8-3331] design main_top has unconnected port radar2_rx
+WARNING: [Synth 8-3331] design sensor_readings_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design sensor_readings_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design sensor_readings_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design sensor_readings_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design sensor_readings_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design sensor_readings_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 443.367 ; gain = 156.484
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 443.367 ; gain = 156.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 443.367 ; gain = 156.484
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Constraints 18-5210] No constraint will be written out.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.216 . Memory (MB): peak = 782.156 ; gain = 3.039
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 782.156 ; gain = 495.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 782.156 ; gain = 495.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 782.156 ; gain = 495.273
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "clkSignal" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 782.156 ; gain = 495.273
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 5     
++---Registers : 
+	               32 Bit    Registers := 8     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 10    
+	                6 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 11    
+	  16 Input     32 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module clkFreqDivider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module edge_detection 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module ultrasonic_reading 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module main_top 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 10    
+Module sensor_readings_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 7     
+	                6 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 6     
+	  16 Input     32 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "U0/sensor_readings_v1_0_S00_AXI_inst/uut/uut/count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "U0/sensor_readings_v1_0_S00_AXI_inst/uut/uut/clkSignal" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3331] design sensor_reading_sensor_readings_0_1 has unconnected port s00_axi_radar1_rx
+WARNING: [Synth 8-3331] design sensor_reading_sensor_readings_0_1 has unconnected port s00_axi_radar2_rx
+WARNING: [Synth 8-3331] design sensor_reading_sensor_readings_0_1 has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design sensor_reading_sensor_readings_0_1 has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design sensor_reading_sensor_readings_0_1 has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design sensor_reading_sensor_readings_0_1 has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design sensor_reading_sensor_readings_0_1 has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design sensor_reading_sensor_readings_0_1 has unconnected port s00_axi_arprot[0]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\U0/sensor_readings_v1_0_S00_AXI_inst/aw_en_reg )
+INFO: [Synth 8-3886] merging instance 'U0/sensor_readings_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'U0/sensor_readings_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/sensor_readings_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'U0/sensor_readings_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'U0/sensor_readings_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/sensor_readings_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3332] Sequential element (U0/sensor_readings_v1_0_S00_AXI_inst/uut/radar1/PWM_pos/data_ff_reg) is unused and will be removed from module sensor_reading_sensor_readings_0_1.
+INFO: [Synth 8-3332] Sequential element (U0/sensor_readings_v1_0_S00_AXI_inst/uut/radar2/PWM_pos/data_ff_reg) is unused and will be removed from module sensor_reading_sensor_readings_0_1.
+INFO: [Synth 8-3332] Sequential element (U0/sensor_readings_v1_0_S00_AXI_inst/aw_en_reg) is unused and will be removed from module sensor_reading_sensor_readings_0_1.
+INFO: [Synth 8-3332] Sequential element (U0/sensor_readings_v1_0_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module sensor_reading_sensor_readings_0_1.
+INFO: [Synth 8-3332] Sequential element (U0/sensor_readings_v1_0_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module sensor_reading_sensor_readings_0_1.
+INFO: [Synth 8-3332] Sequential element (U0/sensor_readings_v1_0_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module sensor_reading_sensor_readings_0_1.
+INFO: [Synth 8-3332] Sequential element (U0/sensor_readings_v1_0_S00_AXI_inst/uut/radar1/reading_reg_reg[0]) is unused and will be removed from module sensor_reading_sensor_readings_0_1.
+INFO: [Synth 8-3332] Sequential element (U0/sensor_readings_v1_0_S00_AXI_inst/uut/radar2/reading_reg_reg[0]) is unused and will be removed from module sensor_reading_sensor_readings_0_1.
+INFO: [Synth 8-3332] Sequential element (U0/sensor_readings_v1_0_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module sensor_reading_sensor_readings_0_1.
+INFO: [Synth 8-3332] Sequential element (U0/sensor_readings_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module sensor_reading_sensor_readings_0_1.
+INFO: [Synth 8-3332] Sequential element (U0/sensor_readings_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module sensor_reading_sensor_readings_0_1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:36 . Memory (MB): peak = 782.156 ; gain = 495.273
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:56 . Memory (MB): peak = 796.375 ; gain = 509.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:57 . Memory (MB): peak = 796.969 ; gain = 510.086
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:00:57 . Memory (MB): peak = 821.324 ; gain = 534.441
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:01:00 . Memory (MB): peak = 821.324 ; gain = 534.441
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:01:00 . Memory (MB): peak = 821.324 ; gain = 534.441
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:01:00 . Memory (MB): peak = 821.324 ; gain = 534.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:01:00 . Memory (MB): peak = 821.324 ; gain = 534.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:01:00 . Memory (MB): peak = 821.324 ; gain = 534.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:01:00 . Memory (MB): peak = 821.324 ; gain = 534.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    52|
+|2     |LUT1   |     7|
+|3     |LUT2   |     8|
+|4     |LUT3   |    41|
+|5     |LUT4   |     8|
+|6     |LUT5   |    36|
+|7     |LUT6   |   113|
+|8     |FDCE   |   112|
+|9     |FDPE   |     1|
+|10    |FDRE   |   334|
+|11    |FDSE   |     6|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------------------------+-----------------------------+------+
+|      |Instance                              |Module                       |Cells |
++------+--------------------------------------+-----------------------------+------+
+|1     |top                                   |                             |   718|
+|2     |  U0                                  |sensor_readings_v1_0         |   717|
+|3     |    sensor_readings_v1_0_S00_AXI_inst |sensor_readings_v1_0_S00_AXI |   717|
+|4     |      uut                             |main_top                     |   356|
+|5     |        radar1                        |ultrasonic_reading           |    97|
+|6     |          PWM_neg                     |edge_detection_1             |    15|
+|7     |        radar2                        |ultrasonic_reading_0         |    97|
+|8     |          PWM_neg                     |edge_detection               |    15|
+|9     |        uut                           |clkFreqDivider               |    82|
++------+--------------------------------------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:01:00 . Memory (MB): peak = 821.324 ; gain = 534.441
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 821.324 ; gain = 195.652
+Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:01:00 . Memory (MB): peak = 821.324 ; gain = 534.441
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 52 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+55 Infos, 40 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:01:04 . Memory (MB): peak = 821.324 ; gain = 539.477
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.runs/sensor_reading_sensor_readings_0_1_synth_1/sensor_reading_sensor_readings_0_1.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.srcs/sources_1/bd/sensor_reading/ip/sensor_reading_sensor_readings_0_1/sensor_reading_sensor_readings_0_1.xci
+INFO: [Coretcl 2-1174] Renamed 8 cell refs.
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Naghmeh/Desktop/sensor_readings_ip_project-master/readings_ip.runs/sensor_reading_sensor_readings_0_1_synth_1/sensor_reading_sensor_readings_0_1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file sensor_reading_sensor_readings_0_1_utilization_synth.rpt -pb sensor_reading_sensor_readings_0_1_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.105 . Memory (MB): peak = 821.324 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 23 13:38:25 2018...

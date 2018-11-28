@@ -1,0 +1,12 @@
+vhdl xil_defaultlib  \
+"../../../bd/sensor_reading/ip/sensor_reading_rst_ps7_0_100M_0/sim/sensor_reading_rst_ps7_0_100M_0.vhd" \
+"../../../bd/sensor_reading/sim/sensor_reading.vhd" \
+"../../../bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0_S00_AXI.vhd" \
+"../../../bd/sensor_reading/ipshared/e8a5/clkFreqDivider.vhd" \
+"../../../bd/sensor_reading/ipshared/e8a5/edge_detection.vhd" \
+"../../../bd/sensor_reading/ipshared/e8a5/main_top.vhd" \
+"../../../bd/sensor_reading/ipshared/e8a5/ultrasonic_reading.vhd" \
+"../../../bd/sensor_reading/ipshared/e8a5/hdl/sensor_readings_v1_0.vhd" \
+"../../../bd/sensor_reading/ip/sensor_reading_sensor_readings_0_1/sim/sensor_reading_sensor_readings_0_1.vhd" \
+
+nosort

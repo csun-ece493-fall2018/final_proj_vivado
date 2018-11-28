@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1543169668">
+  <File Type="BITSTR-BMM" Name="SideServos_wrapper_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="SideServos_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="SideServos_wrapper_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="SideServos_wrapper_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="SideServos_wrapper.tcl"/>
+  <File Type="OPT-TIMING" Name="SideServos_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="SideServos_wrapper_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="SideServos_wrapper_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="SideServos_wrapper_reports.tcl"/>
+  <File Type="OPT-DRC" Name="SideServos_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="SideServos_wrapper.hwdef"/>
+  <File Type="PWROPT-DCP" Name="SideServos_wrapper_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="SideServos_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="SideServos_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="SideServos_wrapper_placed.dcp"/>
+  <File Type="PLACE-IO" Name="SideServos_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="SideServos_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="SideServos_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="SideServos_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="SideServos_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="SideServos_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="SideServos_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="SideServos_wrapper.bgn"/>
+  <File Type="PLACE-TIMING" Name="SideServos_wrapper_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="SideServos_wrapper_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="SideServos_wrapper.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="SideServos_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="SideServos_wrapper_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="SideServos_wrapper_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="SideServos_wrapper.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="SideServos_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="SideServos_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="SideServos_wrapper_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="SideServos_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="SideServos_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="SideServos_wrapper_drc_routed.pb"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="SideServos_wrapper.ltx"/>
+  <File Type="ROUTE-DRC-RPX" Name="SideServos_wrapper_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="SideServos_wrapper.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="SideServos_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="SideServos_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-SYSDEF" Name="SideServos_wrapper.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="SideServos_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="SideServos_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="SideServos_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="SideServos_wrapper_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="SideServos_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="SideServos_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="SideServos_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="SideServos_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="SideServos_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="SideServos_wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="SideServos_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="SideServos_wrapper_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="SideServos_wrapper_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="SideServos_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="SideServos_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="SideServos_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="SideServos_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="SideServos_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="SideServos_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="SideServos_wrapper.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="SideServos_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="SideServos_wrapper.rbt"/>
+  <File Type="BITSTR-NKY" Name="SideServos_wrapper.nky"/>
+  <File Type="BG-DRC" Name="SideServos_wrapper.drc"/>
+  <File Type="RDI-RDI" Name="SideServos_wrapper.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/SideServos/SideServos.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/SideServos/hdl/SideServos_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="SideServos_wrapper"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../../../Andrew Zaragoza/OneDrive/Desktop/side_servos-master/side_servos-master/servos_new.srcs/constrs_1/imports/Desktop/zedboard_master_XDC_RevC_D_v3.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="SideServos_processing_system7_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="SideServos_SideServos_0_0"/>
+</GenRun>

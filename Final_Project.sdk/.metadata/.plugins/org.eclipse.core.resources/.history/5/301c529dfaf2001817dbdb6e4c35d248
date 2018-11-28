@@ -1,0 +1,64 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xuartps_hw.h"
+
+/*
+* The following constants map to the XPAR parameters created in the
+* xparameters.h file. They are defined here such that a user can easily
+* change all the needed parameters in one place.
+*/
+#define UART_BASEADDR XPAR_XUARTPS_0_BASEADDR
+#define UART_CLOCK_HZ XPAR_XUARTPS_0_CLOCK_H
+
+/*
+* The following constant controls the length of the buffers to be sent
+* and received with the device. This constant must be 32 bytes or less so the
+* entire buffer will fit into the TX and RX FIFOs of the device.
+*/
+#define TEST_BUFFER_SIZE 16
+
+#define CHAR_ESC 0x1b /* 'ESC' character is used as terminator */
+
+/**************************** Type Definitions *****************************/
+
+/***************** Macros (Inline Functions) Definitions *******************/
+
+/************************** Function Prototypes ****************************/
+
+int UartPsEchoExample(u32 UartBaseAddress);
+
+/************************** Variable Definitions ***************************/
+
+/*
+* The following buffers are used in this example to send and receive data
+* with the UART.
+*/
+u8 SendBuffer[TEST_BUFFER_SIZE]; /* Buffer for Transmitting Data */
+
+/***************************************************************************/
+/*
+* Main function to call the Uart Echo example.
+*
+* @param None
+*
+* @return XST_SUCCESS if successful, XST_FAILURE if unsuccessful
+*
+* @note None
+* *
+****************************************************************************/
+
+int main()
+{
+    init_platform();
+
+    print("Hello World\n\r");
+
+    cleanup_platform();
+    return 0;
+}

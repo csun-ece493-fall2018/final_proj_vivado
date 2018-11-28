@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Fri Nov 23 19:56:58 UTC 2018
+VLNV: csun.edu:user:sensor_readings:1.0
+SynthRuntime: 45

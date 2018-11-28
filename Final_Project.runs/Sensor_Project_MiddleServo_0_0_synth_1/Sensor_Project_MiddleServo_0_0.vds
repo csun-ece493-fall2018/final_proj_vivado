@@ -1,0 +1,511 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Nov 27 21:41:41 2018
+# Process ID: 33536
+# Current directory: C:/Users/Public/Vivado/Final_Project.runs/Sensor_Project_MiddleServo_0_0_synth_1
+# Command line: vivado.exe -log Sensor_Project_MiddleServo_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Sensor_Project_MiddleServo_0_0.tcl
+# Log file: C:/Users/Public/Vivado/Final_Project.runs/Sensor_Project_MiddleServo_0_0_synth_1/Sensor_Project_MiddleServo_0_0.vds
+# Journal file: C:/Users/Public/Vivado/Final_Project.runs/Sensor_Project_MiddleServo_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source Sensor_Project_MiddleServo_0_0.tcl -notrace
+Command: synth_design -top Sensor_Project_MiddleServo_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 30948 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 388.121 ; gain = 98.695
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Sensor_Project_MiddleServo_0_0' [c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ip/Sensor_Project_MiddleServo_0_0/synth/Sensor_Project_MiddleServo_0_0.vhd:83]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'MiddleServo_v1_0' declared at 'c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ipshared/ae5a/hdl/MiddleServo_v1_0.vhd:5' bound to instance 'U0' of component 'MiddleServo_v1_0' [c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ip/Sensor_Project_MiddleServo_0_0/synth/Sensor_Project_MiddleServo_0_0.vhd:150]
+INFO: [Synth 8-638] synthesizing module 'MiddleServo_v1_0' [c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ipshared/ae5a/hdl/MiddleServo_v1_0.vhd:49]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'MiddleServo_v1_0_S00_AXI' declared at 'c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ipshared/ae5a/hdl/MiddleServo_v1_0_S00_AXI.vhd:5' bound to instance 'MiddleServo_v1_0_S00_AXI_inst' of component 'MiddleServo_v1_0_S00_AXI' [c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ipshared/ae5a/hdl/MiddleServo_v1_0.vhd:86]
+INFO: [Synth 8-638] synthesizing module 'MiddleServo_v1_0_S00_AXI' [c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ipshared/ae5a/hdl/MiddleServo_v1_0_S00_AXI.vhd:86]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-226] default block is never used [c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ipshared/ae5a/hdl/MiddleServo_v1_0_S00_AXI.vhd:235]
+INFO: [Synth 8-226] default block is never used [c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ipshared/ae5a/hdl/MiddleServo_v1_0_S00_AXI.vhd:365]
+INFO: [Synth 8-3491] module 'servos' declared at 'c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ipshared/ae5a/src/servo_mid.vhd:6' bound to instance 'MiddleServo' of component 'servos' [c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ipshared/ae5a/hdl/MiddleServo_v1_0_S00_AXI.vhd:399]
+INFO: [Synth 8-638] synthesizing module 'servos' [c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ipshared/ae5a/src/servo_mid.vhd:14]
+	Parameter originalFreq_Hz bound to: 100000000 - type: integer 
+	Parameter desiredFreq_Hz bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'clkFreqDivider' declared at 'c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ipshared/ae5a/src/clkFreqDivider.vhd:13' bound to instance 'uut' of component 'clkFreqDivider' [c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ipshared/ae5a/src/servo_mid.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'clkFreqDivider' [c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ipshared/ae5a/src/clkFreqDivider.vhd:21]
+	Parameter originalFreq_Hz bound to: 100000000 - type: integer 
+	Parameter desiredFreq_Hz bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clkFreqDivider' (1#1) [c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ipshared/ae5a/src/clkFreqDivider.vhd:21]
+	Parameter originalFreq_Hz bound to: 100000000 - type: integer 
+	Parameter desiredFreq_Hz bound to: 50 - type: integer 
+INFO: [Synth 8-3491] module 'clkFreqDivider' declared at 'c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ipshared/ae5a/src/clkFreqDivider.vhd:13' bound to instance 'uut1' of component 'clkFreqDivider' [c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ipshared/ae5a/src/servo_mid.vhd:44]
+INFO: [Synth 8-638] synthesizing module 'clkFreqDivider__parameterized1' [c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ipshared/ae5a/src/clkFreqDivider.vhd:21]
+	Parameter originalFreq_Hz bound to: 100000000 - type: integer 
+	Parameter desiredFreq_Hz bound to: 50 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clkFreqDivider__parameterized1' (1#1) [c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ipshared/ae5a/src/clkFreqDivider.vhd:21]
+WARNING: [Synth 8-614] signal 'count_0' is read in the process but is not in the sensitivity list [c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ipshared/ae5a/src/servo_mid.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'servos' (2#1) [c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ipshared/ae5a/src/servo_mid.vhd:14]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg2_reg was removed.  [c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ipshared/ae5a/hdl/MiddleServo_v1_0_S00_AXI.vhd:230]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ipshared/ae5a/hdl/MiddleServo_v1_0_S00_AXI.vhd:233]
+INFO: [Synth 8-256] done synthesizing module 'MiddleServo_v1_0_S00_AXI' (3#1) [c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ipshared/ae5a/hdl/MiddleServo_v1_0_S00_AXI.vhd:86]
+INFO: [Synth 8-256] done synthesizing module 'MiddleServo_v1_0' (4#1) [c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ipshared/ae5a/hdl/MiddleServo_v1_0.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'Sensor_Project_MiddleServo_0_0' (5#1) [c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ip/Sensor_Project_MiddleServo_0_0/synth/Sensor_Project_MiddleServo_0_0.vhd:83]
+WARNING: [Synth 8-3331] design MiddleServo_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design MiddleServo_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design MiddleServo_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design MiddleServo_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design MiddleServo_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design MiddleServo_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 442.848 ; gain = 153.422
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 442.848 ; gain = 153.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 442.848 ; gain = 153.422
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Constraints 18-5210] No constraint will be written out.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 793.871 ; gain = 3.152
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 793.871 ; gain = 504.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 793.871 ; gain = 504.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 793.871 ; gain = 504.445
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "clkSignal" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clkSignal" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "flag_mid" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "flag_at_0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "flag_at_180" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 793.871 ; gain = 504.445
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 5     
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 9     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 7     
+	   5 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 4     
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 12    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module clkFreqDivider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module clkFreqDivider__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module servos 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   5 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 5     
+Module MiddleServo_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "uut/count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "uut/clkSignal" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "uut1/count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "uut1/clkSignal" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "uut/count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "uut/clkSignal" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "uut1/count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "uut1/clkSignal" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3331] design Sensor_Project_MiddleServo_0_0 has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design Sensor_Project_MiddleServo_0_0 has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design Sensor_Project_MiddleServo_0_0 has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design Sensor_Project_MiddleServo_0_0 has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design Sensor_Project_MiddleServo_0_0 has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design Sensor_Project_MiddleServo_0_0 has unconnected port s00_axi_arprot[0]
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[1]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[2]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[1]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[2]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[3]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[4]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[5]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[6]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[7]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[8]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[9]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[10]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[11]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[12]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[13]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[14]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[15]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[16]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[17]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[18]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[19]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[20]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[21]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[22]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[23]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[24]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[25]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[26]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[27]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[28]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[29]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[30]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_0_reg[31]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[3]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[4]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[5]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[5]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[6]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[6]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[7]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[8]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[9]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[9]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[10]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[10]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[11]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[11]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[12]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[12]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[13]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[13]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[14]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[14]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[15]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[16]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[16]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[17]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[17]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[18]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[19]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[19]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[20]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[20]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[21]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[21]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[22]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[22]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[23]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[23]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[24]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[24]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[25]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[25]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[26]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[27]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[27]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[28]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[29]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[29]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[30]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[30]' (FDCE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[31] )
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[1]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[2]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[3]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\U0/MiddleServo_v1_0_S00_AXI_inst/aw_en_reg )
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[3]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[4]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[5]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[5]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[6]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[6]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[7]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[8]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[9]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[9]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[10]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[10]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[11]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[11]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[12]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[12]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[13]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[13]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[14]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[14]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[15]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[16]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[16]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[17]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[17]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[18]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[19]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[19]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[20]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[20]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[21]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[21]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[22]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[22]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[23]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[23]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[24]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[24]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[25]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[25]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[26]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[27]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[27]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[28]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[29]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[29]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[30]'
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[30]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[31] )
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/MiddleServo_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'U0/MiddleServo_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'U0/MiddleServo_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/MiddleServo_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3332] Sequential element (U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_mid_reg[31]) is unused and will be removed from module Sensor_Project_MiddleServo_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/MiddleServo_v1_0_S00_AXI_inst/MiddleServo/flag_at_180_reg[31]) is unused and will be removed from module Sensor_Project_MiddleServo_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/MiddleServo_v1_0_S00_AXI_inst/aw_en_reg) is unused and will be removed from module Sensor_Project_MiddleServo_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/MiddleServo_v1_0_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module Sensor_Project_MiddleServo_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/MiddleServo_v1_0_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module Sensor_Project_MiddleServo_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/MiddleServo_v1_0_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module Sensor_Project_MiddleServo_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/MiddleServo_v1_0_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module Sensor_Project_MiddleServo_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/MiddleServo_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module Sensor_Project_MiddleServo_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/MiddleServo_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module Sensor_Project_MiddleServo_0_0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 793.871 ; gain = 504.445
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 799.059 ; gain = 509.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 800.027 ; gain = 510.602
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 832.570 ; gain = 543.145
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 832.570 ; gain = 543.145
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 832.570 ; gain = 543.145
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 832.570 ; gain = 543.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 832.570 ; gain = 543.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 832.570 ; gain = 543.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 832.570 ; gain = 543.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |   156|
+|2     |LUT1   |   101|
+|3     |LUT2   |    78|
+|4     |LUT3   |   154|
+|5     |LUT4   |   139|
+|6     |LUT5   |   212|
+|7     |LUT6   |   311|
+|8     |FDCE   |    97|
+|9     |FDPE   |    11|
+|10    |FDRE   |   169|
+|11    |FDSE   |     2|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------------------------+-------------------------------+------+
+|      |Instance                          |Module                         |Cells |
++------+----------------------------------+-------------------------------+------+
+|1     |top                               |                               |  1430|
+|2     |  U0                              |MiddleServo_v1_0               |  1430|
+|3     |    MiddleServo_v1_0_S00_AXI_inst |MiddleServo_v1_0_S00_AXI       |  1430|
+|4     |      MiddleServo                 |servos                         |  1245|
+|5     |        uut                       |clkFreqDivider                 |    82|
+|6     |        uut1                      |clkFreqDivider__parameterized1 |    82|
++------+----------------------------------+-------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 832.570 ; gain = 543.145
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 832.570 ; gain = 192.121
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 832.570 ; gain = 543.145
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 156 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+152 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 832.570 ; gain = 550.254
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Public/Vivado/Final_Project.runs/Sensor_Project_MiddleServo_0_0_synth_1/Sensor_Project_MiddleServo_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Users/Public/Vivado/Final_Project.srcs/sources_1/bd/Sensor_Project/ip/Sensor_Project_MiddleServo_0_0/Sensor_Project_MiddleServo_0_0.xci
+INFO: [Coretcl 2-1174] Renamed 5 cell refs.
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Public/Vivado/Final_Project.runs/Sensor_Project_MiddleServo_0_0_synth_1/Sensor_Project_MiddleServo_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Sensor_Project_MiddleServo_0_0_utilization_synth.rpt -pb Sensor_Project_MiddleServo_0_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.048 . Memory (MB): peak = 832.570 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 27 21:42:30 2018...
